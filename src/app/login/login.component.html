@@ -1,0 +1,8 @@
+<p>
+  login works!
+</p>
+<ul>
+  <li *ngFor="let login of loginService.logins, let i = index">
+    {{ i }} - {{login.login}} / {{login.password}}
+  </li>
+</ul>

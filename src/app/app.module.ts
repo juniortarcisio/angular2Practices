@@ -1,20 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+import { LoginService } from './services/login.service'
 import { AppComponent } from './app.component';
-import { MyComponent } from './mycomponent.component';
-import { MyComponent2Component } from './my-component2/my-component2.component';
+import { LoginComponent } from './login/login.component';
+import { CreateLoginComponent } from './login/createLogin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponent,
-    MyComponent2Component
+    LoginComponent,
+    CreateLoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

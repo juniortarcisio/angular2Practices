@@ -7,7 +7,10 @@ import { LoginService } from '../services/login.service';
 })
 export class CreateLoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService) { }
+  _loginService : LoginService
+  constructor(loginService: LoginService) {
+      this._loginService = loginService;
+  }
 
   login : string = 'testexd';
   password : string = '4321';
@@ -16,6 +19,6 @@ export class CreateLoginComponent implements OnInit {
   }
 
   criarLogin() {
-    this.loginService.insertLogin(this.login,this.password)
+    this._loginService.insertLogin(this.login,this.password)
   }
 }
